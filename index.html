@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html><head>
+<title>Html5 PhotoMosaic Generator</title>
+<meta content="HTML5 app to create photomosaics from twitter follower list." name="description" />
+
+<style>
+*{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+body {
+	font-family: "HelveticaNeue-Medium", Helvetica, sans-serif;
+	background: #35393C;
+	text-align:center;
+	}
+
+.dDefault{
+	margin-left:auto;
+	margin-right:auto;
+	text-align: center;
+}
+.shad{
+	text-shadow:#151617 0px -1px 0px;
+}
+#logo  {
+	text-align: center;
+	text-indent: -3333px;
+	height: 142px;
+	background: url('images/logon.png') no-repeat center center;
+
+}
+#pcontent{
+	margin: 0px 0px 0px 0px;
+	font-size:12px;
+	color:#b1b1b1;
+}
+#info{
+	font-family:Georgia,Arial,Verdana,sans-serif;
+	font-size:12px;
+	font-style:italic;
+	margin: 5px 0px 0px 0px;
+	color:#b1b1b1;
+}
+a:link{color:#0BA4FF;text-decoration:underline;}
+a:visited{color:#0BA4FF;text-decoration:underline;}
+a:hover{color:#FFF;text-decoration:none;background-color:#0063DC;}
+input[type=text]{
+	font-family:"Arial";
+	font-weight:bold;
+	border:3px solid #484848;
+	width:182px;
+	color:#1b1b1b;
+	background-color: #676767;
+	font-size:1em;
+	text-shadow: #8A8A8A 0px 1px 0px;
+	padding:4px 6px 4px 6px;
+	outline: none;
+}
+#warn {
+	margin-left:auto;
+	margin-right:auto;
+	text-align: center;
+	width:40%;
+	
+}
+#warn h2 { margin-bottom:.3em; font-weight:bold; font-size:28px; }
+#warn a{color:#ffffff;text-decoration:underline;}
+#footr {clear:both; height:18px;position:absolute;bottom:0;left:0;border:none;width:100%}
+
+</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="twittermosaic.js"></script>
+
+</head>
+<body>
+<h1 id="logo">
+  <a href="">Html5 PhotoMosaic Generator</a>
+
+</h1>
+<div id="pcontent"><input type="text" name="domain" id="tz" value="GabrielNewell" /><span id="pregif" style="display: none;"> <img src="images/ajax-loader.gif" /></span>
+<div id="drop_zone" class="dDefault"><canvas id="stage" width="210" height="260">Drop files here</canvas></div></div>
+<div id="info" style="display: none;"><span class="shad">Click anywhere on mosaic to zoom in</span><br/><a href="#" id="dwd" onclick="download_mosaic();">Download</a> &#8226; <a href="#" onclick="refresh_mosaic();">Build Another?</a></div>
+<footer id="footr"></footer>
+</body>
+</html>
